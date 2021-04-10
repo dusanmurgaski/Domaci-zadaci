@@ -1,0 +1,26 @@
+.prveSlike img{
+    height: 300px;
+    width: 200px;
+}
+.slikeIzTabele img{
+    height: 100px;
+    width: 70px;
+}
+.prvaTabela tr th:nth-child(1) {
+    text-align: left;
+    font-size: 35px;
+    height: 80px;
+}
+.drugaTabela tr:nth-child(1) th:nth-child(1) {
+    text-align: left;
+    font-size: 35px;
+    height: 100px;
+}
+.drugaTabela tr:nth-child(2) th:nth-child(1) {
+    height: 60px;
+    font-size: 20px;
+}
+span {
+    font-weight: bold;
+    display: inline-block;
+}
