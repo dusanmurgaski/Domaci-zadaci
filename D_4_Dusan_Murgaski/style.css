@@ -1,0 +1,70 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+
+img {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    left:25%;
+
+}
+
+.pica h3 {
+    position: relative;
+    left:250px ;
+}
+.masline h3 {
+    position: relative;
+    left:220px;
+}
+.pasta h3 {
+    position: relative;
+    left: 250px;
+
+}
+
+
+div {
+    
+    position: relative;
+    width: 33%;
+    height: 500px;
+    margin: 30px;
+   
+}
+.masline {
+    
+    left:33%;
+    position:absolute;
+    top:0;
+    
+}
+.pasta {
+    position:absolute;
+    left:66%;
+    top:0px;
+}
+.pica {
+    position:absolute;
+}
+
+
+aside {
+    position: absolute;
+    top:550px;
+}
+
+
+p {
+    width: 300px;
+    position: relative;
+    left:25%;
+}
+.lorem {
+    width: 100%;
+    position: relative;
+    left:0;
+}
