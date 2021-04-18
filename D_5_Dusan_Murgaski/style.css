@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+form {
+    background-color: rgb(228, 228, 228);
+    height: 50%;
+    border: none;
+ 
+}
+
+
+
+.row {
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    padding: 20px;
+}
+
+#opis {
+    overflow:visible;
+}
+
+
+input {
+    height: 50px;
+    border: solid 2px gray;
+    font-size: 15px;
+    border-radius: 5px;
+}
+select {
+    border:none;
+    height: 50px;
+    border: solid 2px gray;
+    font-size: 15px;
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+	-moz-appearance: none; 
+    -webkit-appearance: none; 
+    background-color: white;
+}
+
+label {
+    display: block;
+    padding-top: 13px;
+    
+}
+textarea {
+    height: 300px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: solid 2px gray;
+}
+button {
+    position: relative;
+    float:right;
+    display:block;
+    width: 100px;
+    height: 70px;
+    background-color:green;
+    border:none;
+    border-radius: 5px;
+    color:white;
+    
+}
+[class*="col-"] {
+    float:left;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.33%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    button {
+        width:100%;
+    }
+    label {
+        position: relative;
+        bottom:11px;
+           
+    }
+    
+}
