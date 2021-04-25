@@ -3,11 +3,11 @@ let n = 40;
 let v = 117;
 
 if (v / n >= 3) {
-    document.body.innerHTML = "<p> DA</p>"
+    document.body.innerHTML = `<p style="color:green"> DA</p>`
 
 }
 else {
-    document.body.innerHTML = `<p> NE , lokal mora da napusti  "${n - v / 3}"</p>`
+    document.body.innerHTML = `<p style="color:red"> NE , lokal mora da napusti  "${n - v / 3}"</p>`
 }
 
 
