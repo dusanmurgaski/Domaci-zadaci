@@ -1,9 +1,15 @@
-// Prvi zadatak
+// Prvi zadatak / Odrediti temp u kelvin
 let f = 200;
 let c = ((f - 32) * 5 / 9);
 console.log(c);
 let kelvin = c + 273.15;
 console.log(kelvin);
+
+// Prvi zadatak / Odrediti temp u faren
+
+f = (kelvin - 273.15) / (5 / 9) + 32;
+console.log(f);
+
 
 
 // Drugi zadatak 
@@ -23,7 +29,7 @@ let novac = (p + m);
 let cenaDvaDzempera = (novac - k);
 let cenaJednogDzempera = (cenaDvaDzempera / 2);
 console.log(cenaJednogDzempera);
-let pk = (500 - cenaJednogDzempera);
-let mk = (600 - cenaJednogDzempera);
+let pk = (p - cenaJednogDzempera);
+let mk = (m - cenaJednogDzempera);
 console.log(pk);
 console.log(mk);
