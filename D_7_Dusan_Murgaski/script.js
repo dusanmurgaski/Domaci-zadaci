@@ -1,6 +1,6 @@
 // Prvi zadatak
 let n = 40;
-let v = 117;
+let v = 120;
 
 if (v / n >= 3) {
     document.body.innerHTML = `<p style="color:green"> DA</p>`
