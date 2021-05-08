@@ -25,14 +25,14 @@
 
 
 
-let pocSatLek1 = 15;
-let pocMinLek1 = 20;
-let krajSatLek1 = 16;
+let pocSatLek1 = 12;
+let pocMinLek1 = 30;
+let krajSatLek1 = 15;
 let krajMinLek1 = 30;
-let pocSatLek2 = 20;
-let pocMinLek2 = 40;
-let krajSatLek2 = 23;
-let krajMinLek2 = 30;
+let pocSatLek2 = 11;
+let pocMinLek2 = 0;
+let krajSatLek2 = 13;
+let krajMinLek2 = 0;
 
 
 document.body.innerHTML += `<h1> Pocetak radnog vremena</h1> 
@@ -42,11 +42,20 @@ document.body.innerHTML += `<h1> Pocetak radnog vremena</h1>
 lekar: ${krajSatLek1}:${krajMinLek1}<br>Drugi lekar: 
 ${krajSatLek2}:${krajMinLek2} </div> <br><br><br>`
 
-if (krajSatLek1 * 60 + krajMinLek1 > pocSatLek2 * 60 + pocMinLek2) {
-    document.body.innerHTML += ` <h2> Preklapaju se ${((krajSatLek1 * 60 + krajMinLek1) - (pocSatLek2 * 60 + pocMinLek2))} minuta </h2>`;
+if (krajSatLek1 * 60 + krajMinLek1 <= pocSatLek2 * 60 + pocMinLek2 || krajSatLek2 * 60 + krajMinLek2 <= pocSatLek1 * 60 + pocMinLek1) {
+    document.body.innerHTML += `<h3>Nema preklapanja</h3>`;
+}
+else if (pocSatLek1 * 60 + pocMinLek1 < pocSatLek2 * 60 + pocMinLek2 && krajSatLek2 * 60 + krajMinLek2 < krajSatLek1 * 60 + krajMinLek1) {
+    document.body.innerHTML += `<h3> Preklapaju se za ${Math.floor(((krajSatLek2 * 60 + krajMinLek2) - (pocSatLek2 * 60 + pocMinLek2)) / 60)}h i ${(((krajSatLek2 * 60 + krajMinLek2) - (pocSatLek2 * 60 + pocMinLek2)) % 60)}m`;
+}
+else if (pocSatLek1 * 60 + pocMinLek1 > pocSatLek2 * 60 + pocMinLek2 && krajSatLek2 * 60 + krajMinLek2 > krajSatLek1 * 60 + krajMinLek1) {
+    document.body.innerHTML += `<h3> Preklapaju se za ${Math.floor(((krajSatLek1 * 60 + krajMinLek1) - (pocSatLek1 * 60 + pocMinLek1)) / 60)}h i ${(((krajSatLek1 * 60 + krajMinLek1) - (pocSatLek1 * 60 + pocMinLek1)) % 60)}m`;
+}
+else if (pocSatLek2 * 60 + pocMinLek2 < krajSatLek1 * 60 + krajMinLek1 && krajSatLek1 * 60 + krajMinLek1 < krajSatLek2 * 60 + krajMinLek2 && pocSatLek2 * 60 + pocMinLek2 > pocSatLek1 * 60 + pocMinLek1) {
+    document.body.innerHTML += `<h3> Preklpaju se za ${Math.floor(((krajSatLek1 * 60 + krajMinLek1) - (pocSatLek2 * 60 + pocMinLek2)) / 60)}h i ${(((krajSatLek1 * 60 + krajMinLek1) - (pocSatLek2 * 60 + pocMinLek2)) % 60)}m`;
 }
 else {
-    document.body.innerHTML += " <h2> Nema preklapanja </h2>";
+    document.body.innerHTML += `<h3> Preklapaju se za ${Math.floor(((krajSatLek2 * 60 + krajMinLek2) - (pocSatLek1 * 60 + pocMinLek1)) / 60)}h i ${(((krajSatLek2 * 60 + krajMinLek2) - (pocSatLek1 * 60 + pocMinLek1)) % 60)}m`;
 }
 
 
@@ -371,7 +380,49 @@ console.log(sumaKubova);
 // 4. Kreirati 64 span elemenata i rasporediti ih kao na slici
 
 for (i = 1; i <= 64; i++) {
-    if (i % 2 == 0) {
+    if (i <= 8 && i % 2 == 0) {
+        document.body.innerHTML += `<span class="parni"> ${i} </span>`
+    }
+    else if (i <= 8 && i % 2 != 0) {
+        document.body.innerHTML += `<span class="neparni"> ${i} </span>`
+    }
+    else if (i > 8 && i <= 16 && i % 2 != 0) {
+        document.body.innerHTML += `<span class="parni"> ${i} </span>`
+    }
+    else if (i > 8 && i <= 16 && i % 2 == 0) {
+        document.body.innerHTML += `<span class="neparni"> ${i} </span>`
+    }
+    else if (i > 16 && i <= 24 && i % 2 != 0) {
+        document.body.innerHTML += `<span class="neparni"> ${i} </span>`
+    }
+    else if (i > 16 && i <= 24 && i % 2 == 0) {
+        document.body.innerHTML += `<span class="parni"> ${i} </span>`
+    }
+    else if (i > 24 && i <= 32 && i % 2 != 0) {
+        document.body.innerHTML += `<span class="parni"> ${i} </span>`
+    }
+    else if (i > 24 && i <= 32 && i % 2 == 0) {
+        document.body.innerHTML += `<span class="neparni"> ${i} </span>`
+    }
+    else if (i > 32 && i <= 40 && i % 2 != 0) {
+        document.body.innerHTML += `<span class="neparni"> ${i} </span>`
+    }
+    else if (i > 32 && i <= 40 && i % 2 == 0) {
+        document.body.innerHTML += `<span class="parni"> ${i} </span>`
+    }
+    else if (i > 40 && i <= 48 && i % 2 != 0) {
+        document.body.innerHTML += `<span class="parni"> ${i} </span>`
+    }
+    else if (i > 40 && i <= 48 && i % 2 == 0) {
+        document.body.innerHTML += `<span class="neparni"> ${i} </span>`
+    }
+    else if (i > 48 && i <= 56 && i % 2 != 0) {
+        document.body.innerHTML += `<span class="neparni"> ${i} </span>`
+    }
+    else if (i > 48 && i <= 56 && i % 2 == 0) {
+        document.body.innerHTML += `<span class="parni"> ${i} </span>`
+    }
+    else if (i > 56 && i <= 64 && i % 2 != 0) {
         document.body.innerHTML += `<span class="parni"> ${i} </span>`
     }
     else {
