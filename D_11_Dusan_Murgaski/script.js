@@ -9,6 +9,7 @@ function suma(n, m) {
     }
     return suma;
 }
+console.log(suma(1, 10));
 
 // 2.Zadatak
 // Napisati funkciju godine kojoj se prosleđuje parametar godRodjenja.
@@ -33,6 +34,6 @@ function deljiv(n, m, k) {
             brojBrojeva++;
         }
     }
-    document.body.innerHTML += `Od ${n} do ${m} ima ukupno ${brojBrojeva} brojeva koji su deljivi sa brojem ${k}`;
+    document.body.innerHTML += `Od n do m ima ukupno ${brojBrojeva} brojeva koji su deljivi sa brojem ${k}`;
 }
 deljiv(1, 10, 2);
