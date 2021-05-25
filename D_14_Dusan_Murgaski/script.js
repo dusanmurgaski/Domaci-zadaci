@@ -120,10 +120,14 @@ let natPrTemp = nizObj => {
     let arSr = 0;
     let temps = 0;
     let brojac = 0;
+    let brojac2 = 0;
     nizObj.forEach(element => {
-        temps += element.arSrTemp();
+        element.temp.forEach(elem => {
+            temps += elem;
+            brojac2++;
+        });
     });
-    arSr = temps / nizObj.length;
+    arSr = temps / brojac2;
     nizObj.forEach(elementi => {
         if (elementi.arSrTemp() > arSr) {
             brojac++;
