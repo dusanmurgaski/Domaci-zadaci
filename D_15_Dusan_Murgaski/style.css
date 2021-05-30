@@ -1,0 +1,25 @@
+/* tr {
+  border: green 2px solid;
+}
+table {
+  border: blue 2px solid;
+  width: 100px;
+  height: 100px;
+}
+td {
+  border: red 2px solid;
+} */
+table tr {
+  border: blue 2px solid;
+  width: 100px;
+  height: 100px;
+}
+td {
+  border: blue 2px solid;
+  width: 100px;
+  height: 100px;
+}
+
+img {
+  width: 100px;
+}
