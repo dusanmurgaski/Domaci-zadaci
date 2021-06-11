@@ -31,7 +31,7 @@ class Pacijent {
     return this._tezina;
   }
   Stampaj() {
-    console.log(this.ime, this.visina, this.visina);
+    console.log(this.ime, this.visina, this.tezina);
   }
   Bmi() {
     let visinaM = this.visina / 100;
@@ -58,7 +58,7 @@ niz.forEach((elem) => {
     najlaksi = elem;
   }
 });
-console.log(najlaksi);
+najlaksi.Stampaj();
 
 let najveciBMI = pacijent1.Bmi();
 niz.forEach((elem) => {
@@ -66,11 +66,11 @@ niz.forEach((elem) => {
     najveciBMI = elem;
   }
 });
-console.log(najveciBMI);
+najveciBMI.Stampaj();
 
 niz.forEach((elem) => {
   if (elem.ime.includes("a" || "A")) {
-    console.log(elem.ime);
+    elem.Stampaj();
   }
 });
 
