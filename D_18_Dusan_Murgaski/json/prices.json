@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "item": "polica 2cm",
+    "price": 500.99
+  },
+  {
+    "id": 2,
+    "item": "krevet 100cm",
+    "price": 3000.99
+  },
+  {
+    "id": 3,
+    "item": "fotelja",
+    "price": 5000.9
+  },
+
+  {
+    "id": 4,
+    "item": "sto",
+    "price": 10000.3
+  },
+  {
+    "id": 5,
+    "item": "lampa",
+    "price": 3500.0
+  },
+  {
+    "id": 6,
+    "item": "noz",
+    "price": 2999.99
+  }
+]
